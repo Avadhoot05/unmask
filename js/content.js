@@ -19,11 +19,17 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         
         if(message["type"] === "togglePassword")
         {
-            SendMessagetoPopup({"type": "currentVisibiltyState", "uState" : !bPasswordVisible}, OnShowHidePasswordClicked);
+            if(GetAllPasswordInputs().length > 0)
+                SendMessagetoPopup({"type": "currentVisibiltyState", "uState" : !bPasswordVisible}, OnShowHidePasswordClicked);
             return;
         }
     }
 });
+
+function GetAllPasswordInputs()
+{
+    return document.querySelectorAll('input[type="password"]');
+}
 
 /**
  * @param {boolean} bPasswordVisible 
@@ -32,7 +38,7 @@ function ShowHidePassword(bShow)
 {
     if(bShow)
     {
-        arrPasswordInputs = document.querySelectorAll('input[type="password"]');        
+        arrPasswordInputs = GetAllPasswordInputs();        
     }
 
     arrPasswordInputs.forEach(input => {
@@ -65,7 +71,8 @@ function SendMessagetoPopup(message, cb)
 
 function Init()
 {
-    CreateEyeBtn();
+    if(GetAllPasswordInputs().length > 0)
+        CreateEyeBtn();
 }
 
 function CreateEyeBtn()

@@ -1,5 +1,5 @@
 .snap-btn {
-    position: absolute;
+    position: fixed;
     right: 24px;
     bottom: 24px;
     width: 50px;
@@ -11,6 +11,9 @@
     color: white;
     box-shadow: 1px 1px 1px 1px #3e3e3e;
     background-color: #2f2f2f;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start
 }
 
 .snap-btn:hover {
