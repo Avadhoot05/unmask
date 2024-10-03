@@ -1,0 +1,73 @@
+input {
+    margin: 0 5px;
+}
+
+.snap-container {
+    width: 300px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.snap-desc {
+    font-size: 14px;
+    margin: 0;
+}
+
+.snap-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.snap-btn {
+    width: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 1px 1px 1px 1px #d3d3d3;
+    background-color: #2f2f2f;
+}
+
+.snap-btn:hover {
+    background-color: #3b3b3b;
+}
+
+.icon {
+    margin-left: 5px;
+}
+
+.disable {
+    pointer-events: none;
+    cursor: default;
+}
+
+.snap-choice-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.snap-choice-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.snap-choice-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
